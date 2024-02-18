@@ -1,0 +1,115 @@
+body {
+    height: 100%;
+    font-family: "Montserrat", "Avenir";
+    text-align: center;
+    --coral: #FA7268;
+    --green: #018492;
+  }
+  
+  h1 {
+    color: var(--coral);
+    border-bottom: 1px solid var(--coral);
+    margin: 0 auto;
+  }
+  
+  /* Game board and block styles */
+  
+  .gameboard {
+    max-width: 75vmin;
+    max-height: 75vmin;
+    margin: 0 auto;
+  }
+  
+  .block {
+    width: 32%;
+    padding-bottom: 32%;
+    float: left;
+    cursor: pointer;
+  }
+  
+  .block:nth-child(3n + 1) {
+    border-right: 1vmin solid var(--green);
+  }
+  
+  .block:nth-child(3n + 0) {
+    border-left: 1vmin solid var(--green);
+  }
+  
+  .firstrow {
+    border-bottom: 1vmin solid var(--green);
+  }
+  
+  .thirdrow {
+    border-top: 1vmin solid var(--green);
+  }
+  
+  .fa-times,
+  .fa-circle {
+    display: none;
+    margin: 0 auto;
+    margin-top: 4vmin;
+    margin-bottom: -50vmin;
+    font-size: 15vmin;
+  }
+  
+  .fa-times {
+    color: var(--coral);
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 12px;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    margin: 15px 0;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  button:hover {
+    background-color: var(--coral);
+    color: white;
+    border: 1px solid var(--coral);
+    transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+  }
+  
+  /* Styles triggered by JS */
+  .clicked {
+    display: block;
+  }
+  
+  
+  #overlay {
+    position: fixed;
+    display: none; 
+    width: 100%; 
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6); 
+  }
+  
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .overlayResetButton {
+    cursor: pointer;
+    background-color: var(--green);
+    font-weight: bold;
+  }
